@@ -1,0 +1,66 @@
+#%RAML 1.0
+title: calculator
+version: v1
+description: Tis api is use to perform some math ops
+protocols: [HTTP,HTTPS]
+mediaType: application/json
+traits:
+  query: !include /traits/trait.raml
+/addition:
+  get:
+    is: [ query]
+    responses:
+      200:
+        body:
+            example: !include examples/response/addition-response.json
+/substraction:
+  put:
+    is: [ query]
+    responses:
+      200:
+        body:
+            example: !include examples/response/sustraction.response.json
+/division:
+  delete:
+    is: [ query]
+    responses:
+     200:
+        body:
+            example: !include /examples/response/division.response.json
+/multi:
+  post:
+    is: [ query]
+    responses:
+          200:
+            body:
+                example: !include /examples/response/multi.response.json
+
+                                      
+
+              
+
+          
+          
+      
+     
+                                
+
+
+          
+      
+          
+      
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+
